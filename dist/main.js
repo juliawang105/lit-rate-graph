@@ -86,6 +86,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/button.js":
+/*!***********************!*\
+  !*** ./src/button.js ***!
+  \***********************/
+/*! exports provided: button */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"button\", function() { return button; });\n/* harmony import */ var _update__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./update */ \"./src/update.js\");\n/* harmony import */ var _literacy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./literacy */ \"./src/literacy.js\");\n\n\n// import { timeLabel } from './legend';\n\n\nconst button = () => {\nlet button = document.getElementById(\"play-button\");\nlet time = 0;\n\nfunction step() {\n  // At the end of our data, loop back\n  time = time < 15 ? time + 1 : 0;\n  Object(_update__WEBPACK_IMPORTED_MODULE_0__[\"update\"])(_literacy__WEBPACK_IMPORTED_MODULE_1__[\"finalData\"][time], time);\n}\n\n// let interval = setInterval(step, 100);\n    let interval;\n    button.addEventListener(\"click\", function(event) {\n    // console.log(button.innerHTML === 'Play')\n\n    if (button.innerHTML === \"Play\") {\n        interval = setInterval(step, 100);\n        // console.log(\"hit 1\");\n        button.innerHTML = \"Pause\";\n    } else if (button.innerHTML === \"Pause\") {\n        clearInterval(interval);\n        // console.log(\"hit 2\");\n        button.innerHTML = \"Play\";\n    }\n    });\n\n    let reset = document.getElementById(\"reset-button\");\n\n    reset.addEventListener(\"click\", function(event) {\n        time = 0\n      Object(_update__WEBPACK_IMPORTED_MODULE_0__[\"update\"])(_literacy__WEBPACK_IMPORTED_MODULE_1__[\"finalData\"][0], time);\n    });\n}\n\n\n\n//# sourceURL=webpack:///./src/button.js?");
+
+/***/ }),
+
 /***/ "./src/chart_area.js":
 /*!***************************!*\
   !*** ./src/chart_area.js ***!
@@ -122,15 +134,27 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lit
 
 /***/ }),
 
+/***/ "./src/legend.js":
+/*!***********************!*\
+  !*** ./src/legend.js ***!
+  \***********************/
+/*! exports provided: regions, regionColor, regionLegend, timeLabel */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"regions\", function() { return regions; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"regionColor\", function() { return regionColor; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"regionLegend\", function() { return regionLegend; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"timeLabel\", function() { return timeLabel; });\n/* harmony import */ var _chart_area_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./chart_area.js */ \"./src/chart_area.js\");\n  \n  \n    const regions = [\"Europe\", \"Asia\", \"Americas\", \"Africa\", \"Oceania\"];\n\n    const regionColor = d3.scaleOrdinal(d3.schemeDark2);\n\n    let legend = _chart_area_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"]\n      .append(\"g\")\n      .attr(\n        \"transform\",\n        \"translate(\" + (_chart_area_js__WEBPACK_IMPORTED_MODULE_0__[\"width\"] - 10) + \",\" + (_chart_area_js__WEBPACK_IMPORTED_MODULE_0__[\"height\"] - 200) + \")\"\n      );\n\n    const regionLegend = regions.forEach(function(region, i) {\n      let legendRow = legend\n        .append(\"g\")\n        .attr(\"transform\", \"translate(0, \" + i * 20 + \")\");\n\n      legendRow\n        .append(\"rect\")\n        .attr(\"width\", 10)\n        .attr(\"height\", 10)\n        .attr(\"fill\", regionColor(region));\n\n      legendRow\n        .append(\"text\")\n        .attr(\"x\", -10)\n        .attr(\"y\", 10)\n        .attr(\"text-anchor\", \"end\")\n        .style(\"text-transform\", \"capitalize\")\n        .text(region);\n    });\n   \n    const timeLabel = _chart_area_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"]\n             .append(\"text\")\n             .attr(\"y\", _chart_area_js__WEBPACK_IMPORTED_MODULE_0__[\"height\"] - 10)\n             .attr(\"x\", _chart_area_js__WEBPACK_IMPORTED_MODULE_0__[\"width\"] - 40)\n             .attr(\"font-size\", \"40px\")\n             .attr(\"opacity\", \"0.4\")\n             .attr(\"text-anchor\", \"middle\")\n             .text(\"2000\");\n\n//# sourceURL=webpack:///./src/legend.js?");
+
+/***/ }),
+
 /***/ "./src/literacy.js":
 /*!*************************!*\
   !*** ./src/literacy.js ***!
   \*************************/
-/*! exports provided: Literacy */
+/*! exports provided: finalData, Literacy */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Literacy\", function() { return Literacy; });\n/* harmony import */ var _chart_area_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./chart_area.js */ \"./src/chart_area.js\");\n/* harmony import */ var _graph_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./graph.js */ \"./src/graph.js\");\n/* harmony import */ var _scales_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scales.js */ \"./src/scales.js\");\n\n\n\n\nconst Literacy = () => {\n    // g\n    // line;\n    // xLabel;\n    // yLabel;\n    // xScale;\n    // yScale\n}\n\n//# sourceURL=webpack:///./src/literacy.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"finalData\", function() { return finalData; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Literacy\", function() { return Literacy; });\n/* harmony import */ var _chart_area_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./chart_area.js */ \"./src/chart_area.js\");\n/* harmony import */ var _graph_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./graph.js */ \"./src/graph.js\");\n/* harmony import */ var _scales_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scales.js */ \"./src/scales.js\");\n/* harmony import */ var _legend_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./legend.js */ \"./src/legend.js\");\n/* harmony import */ var _update__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./update */ \"./src/update.js\");\n/* harmony import */ var _button_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./button.js */ \"./src/button.js\");\n\n\n\n\n\n\n//import { reset } from './button.js';\n\nlet finalData;\n\nconst Literacy = () => {\n    Object(_button_js__WEBPACK_IMPORTED_MODULE_5__[\"button\"])()\n    // reset()\n\n   d3.csv(\"data/literacy.csv\").then(data => {\n     let sortedData = [\n       { year: 2000, countries: [] },\n       { year: 2001, countries: [] },\n       { year: 2002, countries: [] },\n       { year: 2003, countries: [] },\n       { year: 2004, countries: [] },\n       { year: 2005, countries: [] },\n       { year: 2006, countries: [] },\n       { year: 2007, countries: [] },\n       { year: 2008, countries: [] },\n       { year: 2009, countries: [] },\n       { year: 2010, countries: [] },\n       { year: 2011, countries: [] },\n       { year: 2012, countries: [] },\n       { year: 2013, countries: [] },\n       { year: 2014, countries: [] },\n       { year: 2015, countries: [] }\n     ];\n\n     for (let i = 0; i < data.length; i++) {\n       let pojo = data[i];\n\n       for (let j = 0; j < sortedData.length; j++) {\n         if (parseInt(pojo.Year) === sortedData[j].year) {\n           sortedData[j].countries.push(pojo);\n         }\n       }\n     }\n\n     finalData = sortedData.map(function(year) {\n       return year[\"countries\"]\n         .filter(function(country) {\n           let dataExists = country.Elderly !== \"NA\" && country.Youth !== \"NA\";\n           return dataExists;\n         })\n         .map(function(country) {\n           country.Elderly = +country.Elderly;\n           country.Youth = +country.Youth;\n           country.Pop = +country.Pop;\n           return country;\n         });\n     });\n     Object(_update__WEBPACK_IMPORTED_MODULE_4__[\"update\"])(finalData[0], 0)\n   });\n\n\n}\n\n\n\n//# sourceURL=webpack:///./src/literacy.js?");
 
 /***/ }),
 
@@ -143,6 +167,30 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"xScale\", function() { return xScale; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"yScale\", function() { return yScale; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"area\", function() { return area; });\n/* harmony import */ var _chart_area_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./chart_area.js */ \"./src/chart_area.js\");\n\n\nconst xScale = d3\n  .scaleLinear()\n  .range([0, _chart_area_js__WEBPACK_IMPORTED_MODULE_0__[\"width\"] - 40])\n  .domain([1, 100]);\n\nconst yScale = d3\n    .scaleLinear()\n    //   .base(10)\n    .range([_chart_area_js__WEBPACK_IMPORTED_MODULE_0__[\"height\"], 0])\n    .domain([0, 100]);\n\nconst area = d3\n    .scaleLinear()\n    .range([2 * Math.PI, 20 * Math.PI])\n    .domain([1, 1400000000]);\n\n\n\n//# sourceURL=webpack:///./src/scales.js?");
+
+/***/ }),
+
+/***/ "./src/tooltip.js":
+/*!************************!*\
+  !*** ./src/tooltip.js ***!
+  \************************/
+/*! exports provided: tip */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"tip\", function() { return tip; });\n/* harmony import */ var _chart_area_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./chart_area.js */ \"./src/chart_area.js\");\n\n\nconst tip = d3\n   .tip()\n   .attr(\"class\", \"d3-tip\")\n   .html(function(d) {\n     let text = d.name;\n     // text += \" \" + d.region_name;\n     text += \" \" + d.Elderly;\n     text += \" \" + d.Youth;\n     return text;\n   });\n\n _chart_area_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"].call(tip);\n\n//# sourceURL=webpack:///./src/tooltip.js?");
+
+/***/ }),
+
+/***/ "./src/update.js":
+/*!***********************!*\
+  !*** ./src/update.js ***!
+  \***********************/
+/*! exports provided: update */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"update\", function() { return update; });\n/* harmony import */ var _legend_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./legend.js */ \"./src/legend.js\");\n/* harmony import */ var _chart_area_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chart_area.js */ \"./src/chart_area.js\");\n/* harmony import */ var _scales_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scales.js */ \"./src/scales.js\");\n/* harmony import */ var _tooltip_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./tooltip.js */ \"./src/tooltip.js\");\n\n\n\n\n\nconst update = (arr, time) => {\n        \n     let t = d3.transition().duration(100);\n\n     let circles = _chart_area_js__WEBPACK_IMPORTED_MODULE_1__[\"g\"].selectAll(\"circle\").data(arr, function(d) {\n       return d.Entity;\n     });\n\n     circles.exit().remove();\n\n     circles\n       .enter()\n       .append(\"circle\")\n       .attr(\"fill\", function(d) {\n         return Object(_legend_js__WEBPACK_IMPORTED_MODULE_0__[\"regionColor\"])(d.region);\n       })\n       .merge(circles)\n       .attr(\"cy\", function(d) {\n         return Object(_scales_js__WEBPACK_IMPORTED_MODULE_2__[\"yScale\"])(d.Elderly);\n       })\n       .attr(\"cx\", function(d) {\n         return Object(_scales_js__WEBPACK_IMPORTED_MODULE_2__[\"xScale\"])(d.Youth);\n       })\n       .attr(\"r\", function(d) {\n         return Object(_scales_js__WEBPACK_IMPORTED_MODULE_2__[\"area\"])(d.Pop);\n       })\n       .on(\"mouseover\", _tooltip_js__WEBPACK_IMPORTED_MODULE_3__[\"tip\"].show)\n       .on(\"mouseout\", _tooltip_js__WEBPACK_IMPORTED_MODULE_3__[\"tip\"].hide);\n\n       _legend_js__WEBPACK_IMPORTED_MODULE_0__[\"timeLabel\"].text(+(time + 2000));\n\n}\n\n//# sourceURL=webpack:///./src/update.js?");
 
 /***/ })
 
