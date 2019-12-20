@@ -1,6 +1,6 @@
 import { Literacy } from './literacy.js'
 
-console.log("webpack is working");
 document.addEventListener("DOMContentLoaded", () => {
+    console.log("webpack is working");
   Literacy();
 });
