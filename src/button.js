@@ -35,6 +35,7 @@ function step() {
         time = 0
         clearInterval(interval);
         update(finalData[0], time);
+        button.innerHTML = 'Play'
     });
 }
 
