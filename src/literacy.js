@@ -4,14 +4,12 @@ import { xScale, yScale, area } from './scales.js';
 import { regionLegend } from './legend.js';
 import { update } from './update';
 import { button } from './button.js';
-//import { reset } from './button.js';
 
 export let finalData;
 
 export const Literacy = () => {
     button()
-    // reset()
-
+    
    d3.csv("data/literacy.csv").then(data => {
      let sortedData = [
        { year: 2000, countries: [] },
