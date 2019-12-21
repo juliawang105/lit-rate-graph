@@ -2153,8 +2153,6 @@ Bhutan,Asia,Southern Asia,NA,BTN,2011,NA,NA,738267
 Bhutan,Asia,Southern Asia,NA,BTN,2012,14.9379596710205,87.318359375,750443
 Bhutan,Asia,Southern Asia,NA,BTN,2013,NA,NA,762313
 Bhutan,Asia,Southern Asia,NA,BTN,2015,17.7892894744873,92.0408401489258,787000
-Bolivia (Plurinational State of),Americas,Latin America and the Caribbean,South America,NA,NA,NA,NA,NA
-"Bonaire, Sint Eustatius and Saba",Americas,Latin America and the Caribbean,Caribbean,NA,NA,NA,NA,NA
 Bosnia and Herzegovina,Europe,Southern Europe,NA,BIH,1800,NA,NA,851806
 Bosnia and Herzegovina,Europe,Southern Europe,NA,BIH,1820,NA,NA,851806
 Bosnia and Herzegovina,Europe,Southern Europe,NA,BIH,1950,NA,NA,2661293
@@ -15534,7 +15532,6 @@ South Africa,Africa,Sub-Saharan Africa,Southern Africa,ZAF,2012,69.1462631225586
 South Africa,Africa,Sub-Saharan Africa,Southern Africa,ZAF,2013,NA,NA,50981076
 South Africa,Africa,Sub-Saharan Africa,Southern Africa,ZAF,2014,70.8834991455078,98.8822784423828,54500000
 South Africa,Africa,Sub-Saharan Africa,Southern Africa,ZAF,2015,71.2561721801758,99.0270004272461,55300000
-South Georgia and the South Sandwich Islands,Americas,Latin America and the Caribbean,South America,NA,NA,NA,NA,NA
 South Sudan,Africa,Sub-Saharan Africa,Eastern Africa,SSD,1700,NA,NA,900216
 South Sudan,Africa,Sub-Saharan Africa,Eastern Africa,SSD,1800,NA,NA,1027378
 South Sudan,Africa,Sub-Saharan Africa,Eastern Africa,SSD,1820,NA,NA,1054890
@@ -16583,7 +16580,6 @@ Tajikistan,Asia,Central Asia,NA,TJK,2012,NA,NA,7078755
 Tajikistan,Asia,Central Asia,NA,TJK,2013,NA,NA,7183529
 Tajikistan,Asia,Central Asia,NA,TJK,2014,98.1343078613281,99.8734588623047,8360000
 Tajikistan,Asia,Central Asia,NA,TJK,2015,98.3384399414063,99.8751068115234,8550000
-"Tanzania, United Republic of",Africa,Sub-Saharan Africa,Eastern Africa,NA,NA,NA,NA,NA
 Thailand,Asia,South-eastern Asia,NA,THA,1800,NA,NA,4665000
 Thailand,Asia,South-eastern Asia,NA,THA,1820,NA,NA,4665000
 Thailand,Asia,South-eastern Asia,NA,THA,1850,NA,NA,5230000
@@ -16704,7 +16700,6 @@ Thailand,Asia,South-eastern Asia,NA,THA,2011,NA,NA,69518555
 Thailand,Asia,South-eastern Asia,NA,THA,2012,NA,NA,69892142
 Thailand,Asia,South-eastern Asia,NA,THA,2013,NA,98.3138809204102,70243267
 Thailand,Asia,South-eastern Asia,NA,THA,2015,78.9420013427734,98.6408462524414,68700000
-Timor-Leste,Asia,South-eastern Asia,NA,NA,NA,NA,NA,NA
 Togo,Africa,Sub-Saharan Africa,Western Africa,TGO,1800,NA,NA,445985
 Togo,Africa,Sub-Saharan Africa,Western Africa,TGO,1820,NA,NA,445985
 Togo,Africa,Sub-Saharan Africa,Western Africa,TGO,1950,NA,NA,1395458
@@ -17619,9 +17614,6 @@ United Arab Emirates,Asia,Western Asia,NA,ARE,2011,NA,NA,7890924
 United Arab Emirates,Asia,Western Asia,NA,ARE,2012,NA,NA,8105873
 United Arab Emirates,Asia,Western Asia,NA,ARE,2013,NA,NA,8207940
 United Arab Emirates,Asia,Western Asia,NA,ARE,2015,72.314582824707,99.4596710205078,9150000
-United Kingdom of Great Britain and Northern Ireland,Europe,Northern Europe,NA,NA,NA,NA,NA,NA
-United States of America,Americas,Northern America,NA,NA,NA,NA,NA,NA
-United States Minor Outlying Islands,Oceania,Micronesia,NA,NA,NA,NA,NA,NA
 Uruguay,Americas,Latin America and the Caribbean,South America,URY,1800,NA,NA,55000
 Uruguay,Americas,Latin America and the Caribbean,South America,URY,1820,NA,NA,55000
 Uruguay,Americas,Latin America and the Caribbean,South America,URY,1850,NA,NA,132000
@@ -17908,10 +17900,6 @@ Vanuatu,Oceania,Melanesia,NA,VUT,2013,NA,NA,257812
 Vanuatu,Oceania,Melanesia,NA,VUT,2014,39.753101348877,95.4613571166992,259000
 Vanuatu,Oceania,Melanesia,NA,VUT,2015,41.5821990966797,95.7193298339844,265000
 Venezuela (Bolivarian Republic of),Americas,Latin America and the Caribbean,South America,NA,NA,NA,NA,NA
-Viet Nam,Asia,South-eastern Asia,NA,NA,NA,NA,NA,NA
-Virgin Islands (British),Americas,Latin America and the Caribbean,Caribbean,NA,NA,NA,NA,NA
-Virgin Islands (U.S.),Americas,Latin America and the Caribbean,Caribbean,NA,NA,NA,NA,NA
-Wallis and Futuna,Oceania,Polynesia,NA,NA,NA,NA,NA,NA
 Western Sahara,Africa,Northern Africa,NA,ESH,1800,NA,NA,2788
 Western Sahara,Africa,Northern Africa,NA,ESH,1820,NA,NA,2788
 Western Sahara,Africa,Northern Africa,NA,ESH,1950,NA,NA,13766
@@ -18514,7 +18502,7 @@ Cote d'Ivoire,NA,NA,NA,CIV,1996,NA,NA,15089912
 Cote d'Ivoire,NA,NA,NA,CIV,1997,NA,NA,15492127
 Cote d'Ivoire,Africa,NA,NA,CIV,1998,7.74271011352539,47.058708190918,15878555
 Cote d'Ivoire,Africa,NA,NA,CIV,1999,NA,NA,16242889
-Cote d'Ivoire,NA,NA,NA,CIV,2000,11.1302795410156,60.7236518859863,16581653
+Cote d'Ivoire,Africa,NA,NA,CIV,2000,11.1302795410156,60.7236518859863,16581653
 Cote d'Ivoire,NA,NA,NA,CIV,2001,NA,NA,16892864
 Cote d'Ivoire,NA,NA,NA,CIV,2002,NA,NA,17180649
 Cote d'Ivoire,NA,NA,NA,CIV,2003,NA,NA,17455501

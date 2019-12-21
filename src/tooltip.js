@@ -8,6 +8,7 @@ export const tip = d3
      // text += " " + d.region_name;
      text += " " + d.Elderly;
      text += " " + d.Youth;
+     text += " " + d.region
      return text;
    });
 

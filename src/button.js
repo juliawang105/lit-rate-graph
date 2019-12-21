@@ -19,7 +19,7 @@ function step() {
     // console.log(button.innerHTML === 'Play')
 
     if (button.innerHTML === "Play") {
-        interval = setInterval(step, 150);
+        interval = setInterval(step, 500);
         // console.log("hit 1");
         button.innerHTML = "Pause";
     } else if (button.innerHTML === "Pause") {
@@ -39,3 +39,17 @@ function step() {
     });
 }
 
+let select = document.getElementById('continent-select')
+export const selectColor = (arr) => {
+    let region = select.value; 
+    arr = arr.filter( d => {
+         if(region === 'all'){
+             return true; 
+         } else {
+            //  console.log(region)
+             return d.region === region;
+         }
+     });   
+     
+     return arr;
+};

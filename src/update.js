@@ -1,26 +1,18 @@
-import { regions, regionColor, regionLegend, timeLabel } from './legend.js'
+import { regionColor,timeLabel } from './legend.js'
 import { g } from './chart_area.js';
 import { xScale, yScale, area } from './scales.js';
 import { tip } from './tooltip.js';
+import { selectColor } from './button.js'
 
 export const update = (arr, time) => {
+    // console.log(arr); 
         
     let t = d3.transition().duration(100);
 
-    let continent = document.getElementById("continent-select");
-    let value = continent.value;
-    
-    let data = arr.filter(function(d){
-        if(value === 'all'){
-            return true;
-        } else {
-            return d.region === value; 
-        }
-    })
-//  console.log(continent)
+    arr = selectColor(arr);
 
-    let circles = g.selectAll("circle").data(data, function(d) {
-    return d.Entity;
+    let circles = g.selectAll("circle").data(arr, function(d) {
+    return d.name;
     });
 
     circles.exit().remove();
@@ -29,7 +21,10 @@ export const update = (arr, time) => {
     .enter()
     .append("circle")
     .attr("fill", function(d) {
-        return regionColor(d.region);
+        if (d.region === 'Asia') {
+            // console.log(d.name, regionColor(d.region)); 
+        }
+        return regionColor(d.region)
     })
     .merge(circles)
     .attr("cy", function(d) {
@@ -45,5 +40,5 @@ export const update = (arr, time) => {
     .on("mouseout", tip.hide);
 
     timeLabel.text(+(time + 2000));
-
+    //debugger
 }

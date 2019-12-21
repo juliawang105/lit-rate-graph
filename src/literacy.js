@@ -43,7 +43,7 @@ export const Literacy = () => {
      finalData = sortedData.map(function(year) {
        return year["countries"]
          .filter(function(country) {
-           let dataExists = country.Elderly !== "NA" && country.Youth !== "NA";
+           let dataExists = (country.Elderly !== "NA" && country.Youth !== "NA") && country.Pop;
            return dataExists;
          })
          .map(function(country) {
