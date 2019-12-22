@@ -3,10 +3,10 @@ import { xScale, yScale } from './scales';
 // //Diagonal Line 
 export const line = g
   .append("line")
-  .attr("x1", 760)
+  .attr("x1", 560)
   .attr("y1", 0)
   .attr("x2", 0)
-  .attr("y2", 650)
+  .attr("y2", height)
   .attr("stroke", "silver")
   .attr("stroke-width", "1");
 

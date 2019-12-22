@@ -4,17 +4,19 @@
 <head>
 
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Poppins&display=swap" rel="stylesheet">
-
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./stylesheets/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./stylesheets/description.css" />
+    <link rel="stylesheet" type="text/css" href="./stylesheets/main.css" />
+     <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 
 <body>
-    <div class='main'>
-        <div class="app-name">World Literacy Rates</div>
-        <div id='chart-area'></div>
-        <button id="play-button">Play</button>
-        <button id="reset-button">Reset</button>
-       
+    <div class="app-name">World Literacy Rates</div>
+    <div class="main">
+        <div class="filters">
+            <button id="play-button">Play</button>
+            <button id="reset-button">Reset</button>
+            
             <select id="continent-select">
                 <option selected value="all">All</option>
                 <option value="Europe">Europe</option>
@@ -23,20 +25,20 @@
                 <option value="Africa">Africa</option>
                 <option value="Oceania">Oceania</option>
             </select>
-            <!-- <div id="slider-div">
-                <label>Year: <span id="year">1800</span></label>
-                <div id="date-slider"></div>
-            </div> -->
-    <div class="rangeslider">
-        <input type="range" min="2000" max="2015" value="10" class="myslider" id="sliderRange">
-        <p>Value: <span id='demo'></span></p>
-    </div>
-   
-        <script src="src/d3-tip.js"></script>
-        <script src='dist/main.js'></script>
-        <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
-
-
+            
+            <div class="rangeslider">
+                <input type="range" min="2000" max="2015" value="10" class="myslider" id="sliderRange">
+                <p>Value: <span id='demo'></span></p>
+            </div>
+        </div>
+       
+        <div class='graph'>
+            <div id='chart-area'></div>
+            <script src="src/d3-tip.js"></script>
+            <script src='dist/main.js'></script>
+        </div>
+        
+        <div class="description">Description</div>
     </div>
 </body>
 
