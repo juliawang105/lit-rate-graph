@@ -53,3 +53,17 @@ export const selectColor = (arr) => {
      
      return arr;
 };
+
+   let rangeslider = document.getElementById("sliderRange");
+   let output = document.getElementById("demo");
+   output.innerHTML = rangeslider.value;
+   let year;
+
+   export const slider = arr => {
+     rangeslider.addEventListener('input', function(event){
+         year = event.target.value - 2000;
+         output.innerHTML = event.target.value;
+         //console.log(year)
+         update(finalData[year], year)
+     })
+   };
