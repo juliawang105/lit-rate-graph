@@ -8,7 +8,7 @@
       .append("g")
       .attr(
         "transform",
-        "translate(" + (width - 10) + "," + (height - 200) + ")"
+        "translate(" + 80 + "," + (0) + ")"
       );
 
     export const regionLegend = regions.forEach(function(region, i) {
