@@ -17,17 +17,17 @@ export const xLabel = g
   .attr("x", width / 2)
   .attr("font-size", "20px")
   .attr("text-anchor", "middle")
-  .text("Youth Literacy Rate");
+  .text("Youth Literacy Rate, Population 15-24 years(%)");
 
 // //Y Label
 export const yLabel = g
   .append("text")
   .attr("y", -40)
-  .attr("x", -170)
+  .attr("x", -261)
   .attr("font-size", "20px")
   .attr("text-anchor", "middle")
   .attr("transform", "rotate(-90)")
-  .text("Elderly Literacy Rate");
+  .text("Elderly Literacy Rate, Population 65+ years(%)");
 
 const xAxis = d3
     .axisBottom(xScale)

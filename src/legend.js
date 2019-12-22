@@ -2,7 +2,7 @@
   
     export const regions = ["Europe", "Asia", "Americas", "Africa", "Oceania"];
 
-    export const regionColor = d3.scaleOrdinal(d3.schemeDark2);
+    export const regionColor = d3.scaleOrdinal(d3.schemeTableau10);
     
     let legend = g
       .append("g")

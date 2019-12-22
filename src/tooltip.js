@@ -6,9 +6,10 @@ export const tip = d3
    .html(function(d) {
      let text = d.name;
      // text += " " + d.region_name;
-     text += " " + d.Elderly;
-     text += " " + d.Youth;
-     text += " " + d.region
+     text += " " + d.Elderly.toFixed(2);
+     text += " " + d.Youth.toFixed(2);
+     text += " " + d.region;
+     text += " " + d.Pop
      return text;
    });
 

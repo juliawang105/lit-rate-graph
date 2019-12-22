@@ -17,13 +17,10 @@ export const update = (arr, time) => {
 
     circles.exit().remove();
 
-    circles
+    let circle = circles
     .enter()
     .append("circle")
     .attr("fill", function(d) {
-        if (d.region === 'Asia') {
-            // console.log(d.name, regionColor(d.region)); 
-        }
         return regionColor(d.region)
     })
     .merge(circles)
@@ -37,8 +34,8 @@ export const update = (arr, time) => {
         return area(d.Pop);
     })
     .on("mouseover", tip.show)
-    .on("mouseout", tip.hide);
-
+    .on("mouseout", tip.hide)
+   
     timeLabel.text(+(time + 2000));
-    //debugger
+    
 }
