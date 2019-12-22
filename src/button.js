@@ -10,6 +10,8 @@ let time = 0;
 function step() {
   // At the end of our data, loop back
   time = time < 15 ? time + 1 : 0;
+  output.innerHTML = time + 2000;
+  rangeslider.value = time + 2000;
   update(finalData[time], time);
 }
 
@@ -30,12 +32,18 @@ function step() {
     });
 
     let reset = document.getElementById("reset-button");
+    let rangeslider = document.getElementById("sliderRange");
+    let output = document.getElementById("demo");
+    output.innerHTML = rangeslider.value;
 
     reset.addEventListener("click", function(event) {
         time = 0
         clearInterval(interval);
         update(finalData[0], time);
-        button.innerHTML = 'Play'
+        button.innerHTML = 'Play';
+        output.innerHTML = 2000;
+        rangeslider.value = 2000;
+        
     });
 }
 
