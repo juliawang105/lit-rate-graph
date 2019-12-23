@@ -90,6 +90,7 @@ export const regionLegend = regions.forEach(function(region, i) {
     });
 };
 
+let select = document.getElementById("continent-select");
 export const selectRegion = () => {
     select.addEventListener("change", function() {
     update(finalData[time], time);
