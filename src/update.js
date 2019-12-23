@@ -32,6 +32,7 @@ export const update = (arr, time) => {
         return area(d.Pop);
       })
       .attr("opacity", "70%")
+      .style("cursor", "pointer")
       .on("mouseover", tip.show)
       .on("mouseout", tip.hide);
       
