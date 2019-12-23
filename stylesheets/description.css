@@ -10,7 +10,9 @@
     padding: 15px;
     margin: 25px;
     background-color: #FDFDF0;
-    color: #545454
+    color: #545454;
+    animation-name: fadeIn;
+    animation-duration: 2s
 }
 
 .description > :last-child {

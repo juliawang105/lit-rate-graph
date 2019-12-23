@@ -8,7 +8,7 @@
 .app-name {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     /* border: 1px solid black; */
     height: 50px; 
     font-family: "Karla";
@@ -16,4 +16,14 @@
     background-color:  #FDFDF0;
     color: #545454
 
+}
+
+.title {
+    margin-left: 40px;
+    margin-right: 20px;
+}
+
+#link {
+   color: #545454;
+   margin: 5px; 
 }

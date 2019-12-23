@@ -10,12 +10,25 @@
     <link rel="stylesheet" type="text/css" href="./stylesheets/main.css" />
     <link rel="stylesheet" type="text/css" href="./stylesheets/graph.css" />
     <link rel="stylesheet" type="text/css" href="./stylesheets/buttons.css" />
+    <link rel="stylesheet" type="text/css" href="./stylesheets/animate.css" />
+    <script src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>
 
      <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 
 <body>
-    <div class="app-name">LitRate Graph</div>
+    <div class="app-name">
+        <div class="title">LitRate Graph</div>
+        <div class="links">
+            <a id="link" target="_blank" href="https://github.com/juliawang105/fullstack"><i
+                    class="fab fa-github fa-1x"></i></a>
+            <a id="link" target="_blank" href="https://www.linkedin.com/in/julia-wang-b1981231/"><i
+                    class="fab fa-linkedin fa-1x"></i></a>
+        </div>
+        
+    </div>
+        
+    </div>
     <div class="main">
         <div class="filters">
             <button id="play-button">Play</button>
@@ -32,7 +45,7 @@
             
             <div class="rangeslider">
                 <input type="range" min="2000" max="2015" value="10" class="myslider" id="sliderRange">
-                <p>Value: <span id='demo'></span></p>
+                <p>Year: <span id='demo'></span></p>
             </div>
         </div>
        
