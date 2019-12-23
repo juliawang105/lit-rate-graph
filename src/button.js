@@ -21,7 +21,7 @@ function step() {
     // console.log(button.innerHTML === 'Play')
 
     if (button.innerHTML === "Play") {
-        interval = setInterval(step, 500);
+        interval = setInterval(step, 150);
         // console.log("hit 1");
         button.innerHTML = "Pause";
     } else if (button.innerHTML === "Pause") {

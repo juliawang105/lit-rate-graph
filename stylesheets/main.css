@@ -1,7 +1,15 @@
 .main{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .filter{
     display: flex;
+}
+
+.app-name {
+    border: 1px solid black;
+    height: 50px;
+    text-align: center;
 }
