@@ -51,54 +51,62 @@ let circles = g.selectAll("circle").data(arr, function(d) {
    ```
    #### Region: 
    * D3's ordinal scale is utilized to allow for correct regional color rendering. 
+   * Event listeners are used for regions to display on change.
 ``` javascript
 export const regions = ["Europe", "Asia", "Americas", "Africa", "Oceania"];
 
-    export const regionColor = d3.scaleOrdinal(d3.schemeTableau10);
-    
-    let legend = g
-      .append("g")
-      .attr(
-        "transform",
-        "translate(" + 810 + "," + (425) + ")"
-      );
+export const regionColor = d3.scaleOrdinal(d3.schemeTableau10);
 
-    export const regionLegend = regions.forEach(function(region, i) {
-      let legendRow = legend
-        .append("g")
-        .attr("transform", "translate(0, " + i * 20 + ")");
+let legend = g
+  .append("g")
+  .attr(
+    "transform",
+    "translate(" + 810 + "," + (425) + ")"
+  );
 
-      legendRow
-        .append("rect")
-        .attr("width", 10)
-        .attr("height", 10)
-        .attr("fill", regionColor(region))
-        .attr("opacity", "70%")
-        
-      legendRow
-        .append("text")
-        .attr("x", -10)
-        .attr("y", 10)
-        .attr("text-anchor", "end")
-        .style("text-transform", "capitalize")
-        .attr("font-family", "Karla")
-        .text(region)
-        .style("fill", "#545454")
-        .attr("opacity", "0.8");
+export const regionLegend = regions.forEach(function(region, i) {
+  let legendRow = legend
+    .append("g")
+    .attr("transform", "translate(0, " + i * 20 + ")");
+
+  legendRow
+    .append("rect")
+    .attr("width", 10)
+    .attr("height", 10)
+    .attr("fill", regionColor(region))
+    .attr("opacity", "70%")
+
+  legendRow
+    .append("text")
+    .attr("x", -10)
+    .attr("y", 10)
+    .attr("text-anchor", "end")
+    .style("text-transform", "capitalize")
+    .attr("font-family", "Karla")
+    .text(region)
+    .style("fill", "#545454")
+    .attr("opacity", "0.8");
 
     });
+};
+
+export const selectRegion = () => {
+    select.addEventListener("change", function() {
+    update(finalData[time], time);
+});
+
    ```
 ### Button Controls
 
 * Users have the ability to play through all the years to see a general trend of literacy rates. 
 * Users have the ability to pause on specific years or reset to start again from the beginning. 
-* Features were created using Vanilla JS's setInterval and clearInterval functions to update and clear data rendering. 
+* Features were created using Vanilla JS's setInterval() and clearInterval() functions to update and clear data rendering. 
 ![buttons](https://i.pinimg.com/originals/bf/d8/5d/bfd85d45435b44b25e7a93b56de6f44b.gif)
 
 ### Slider Control
 
 * Users have the ability to choose specific years they want to view using the date slider. 
-* As users pause on a specific years, data rendered in update via eventListeners. 
+* As users pause on a specific years, data rendered in update via event listeners. 
 ```  javascript let rangeslider = document.getElementById("sliderRange");
 let year;
 let rangeslider = document.getElementById("sliderRange");
