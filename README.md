@@ -99,17 +99,18 @@ export const regions = ["Europe", "Asia", "Americas", "Africa", "Oceania"];
 * Users have the ability to choose specific years they want to view using the date slider. 
 * As users pause on a specific years, data rendered in update via eventListeners. 
 ```  javascript let rangeslider = document.getElementById("sliderRange");
-   let output = document.getElementById("demo");
-   output.innerHTML = rangeslider.value;
-   let year;
+let year;
+let rangeslider = document.getElementById("sliderRange");
+let output = document.getElementById("demo");
+output.innerHTML = rangeslider.value;
 
-   export const slider = arr => {
-     rangeslider.addEventListener('input', function(event){
-         year = event.target.value - 2000;
-         output.innerHTML = event.target.value;
-         update(finalData[year], year)
-     })
-   };
+export const slider = arr => {
+    rangeslider.addEventListener('input', function(event){
+        year = event.target.value - 2000;
+        output.innerHTML = event.target.value;
+        update(finalData[year], year)
+    });
+};
    ```
 #### D3 Tips 
 * Users can hover over specific circles to see country specific data. 
