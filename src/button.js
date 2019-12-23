@@ -1,66 +1,68 @@
 import { update } from './update';
 import { finalData } from './literacy';
-// import { timeLabel } from './legend';
 
-
+let time = 0;
 export const button = () => {
 let button = document.getElementById("play-button");
-let time = 0;
+
 
 function step() {
-  // At the end of our data, loop back
   time = time < 15 ? time + 1 : 0;
   output.innerHTML = time + 2000;
   rangeslider.value = time + 2000;
   update(finalData[time], time);
 }
 
-// let interval = setInterval(step, 100);
     let interval;
     button.addEventListener("click", function(event) {
-    // console.log(button.innerHTML === 'Play')
 
     if (button.innerHTML === "Play") {
         interval = setInterval(step, 200);
-        // console.log("hit 1");
         button.innerHTML = "Pause";
     } else if (button.innerHTML === "Pause") {
         clearInterval(interval);
-        // console.log("hit 2");
         button.innerHTML = "Play";
     }
     });
 
-    let reset = document.getElementById("reset-button");
+    let restart = document.getElementById("reset-button");
     let rangeslider = document.getElementById("sliderRange");
     let output = document.getElementById("demo");
     output.innerHTML = rangeslider.value;
 
-    reset.addEventListener("click", function(event) {
+    restart.addEventListener("click", function(event) {
         time = 0
         clearInterval(interval);
         update(finalData[0], time);
         button.innerHTML = 'Play';
         output.innerHTML = 2000;
         rangeslider.value = 2000;
-        
+      
     });
 }
 
-let select = document.getElementById('continent-select')
+
+let select = document.getElementById("continent-select");
+
+export const selectRegion = () => {
+select.addEventListener("change", function() {
+  update(finalData[time], time);
+});
+}
+
 export const selectColor = (arr) => {
     let region = select.value; 
     arr = arr.filter( d => {
          if(region === 'all'){
              return true; 
          } else {
-            //  console.log(region)
              return d.region === region;
          }
      });   
-     
      return arr;
 };
+
+
 
    let rangeslider = document.getElementById("sliderRange");
    let output = document.getElementById("demo");
@@ -71,7 +73,6 @@ export const selectColor = (arr) => {
      rangeslider.addEventListener('input', function(event){
          year = event.target.value - 2000;
          output.innerHTML = event.target.value;
-         //console.log(year)
          update(finalData[year], year)
      })
    };
