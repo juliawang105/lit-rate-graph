@@ -1,5 +1,6 @@
 # LitRate Graph
 [Live Site](https://juliawang105.github.io/lit-rate-graph/)
+
 ![splash](https://i.pinimg.com/originals/4c/f6/6d/4cf66dd46a4544c01235ec268bd11c34.gif)
 
 ## Background
