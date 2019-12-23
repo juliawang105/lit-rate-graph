@@ -8,7 +8,7 @@
       .append("g")
       .attr(
         "transform",
-        "translate(" + 80 + "," + (0) + ")"
+        "translate(" + 810 + "," + (425) + ")"
       );
 
     export const regionLegend = regions.forEach(function(region, i) {
@@ -20,22 +20,29 @@
         .append("rect")
         .attr("width", 10)
         .attr("height", 10)
-        .attr("fill", regionColor(region));
-
+        .attr("fill", regionColor(region))
+        .attr("opacity", "70%")
+        
       legendRow
         .append("text")
         .attr("x", -10)
         .attr("y", 10)
         .attr("text-anchor", "end")
         .style("text-transform", "capitalize")
-        .text(region);
+        .attr("font-family", "Karla")
+        .text(region)
+        .style("fill", "#545454")
+        .attr("opacity", "0.8");
+
     });
    
     export const timeLabel = g
              .append("text")
-             .attr("y", height - 10)
-             .attr("x", width - 40)
-             .attr("font-size", "40px")
-             .attr("opacity", "0.4")
+             .attr("y", height)
+             .attr("x", width - 20)
+             .attr("font-size", "35px")
+             .attr("opacity", "0.6")
              .attr("text-anchor", "middle")
-             .text("2000");
+             .attr("font-family", "Karla")
+             .text("2000")
+             .style("fill", "#545454");

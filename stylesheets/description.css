@@ -1,6 +1,18 @@
 .description {
-    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* height: 180px; */
     width: 400px;
-    border: 1px solid black
-    
+    /* border: 1px solid black; */
+    border-radius: 2%;
+    font-family: "Karla";
+    padding: 15px;
+    margin: 25px;
+    background-color: #FDFDF0;
+    color: #545454
+}
+
+.description > :last-child {
+    font-size: 10pt;;
 }

@@ -3,7 +3,7 @@ import { xScale, yScale } from './scales';
 // //Diagonal Line 
 export const line = g
   .append("line")
-  .attr("x1", 560)
+  .attr("x1", 685)
   .attr("y1", 0)
   .attr("x2", 0)
   .attr("y2", height)
@@ -17,7 +17,9 @@ export const xLabel = g
   .attr("x", width / 2)
   .attr("font-size", "20px")
   .attr("text-anchor", "middle")
-  .text("Youth Literacy Rate, Population 15-24 years(%)");
+  .text("Youth Literacy Rate, Population 15-24 years (%)")
+  .attr("font-family", "Karla")
+  .style("fill", "#545454")
 
 // //Y Label
 export const yLabel = g
@@ -27,14 +29,17 @@ export const yLabel = g
   .attr("font-size", "20px")
   .attr("text-anchor", "middle")
   .attr("transform", "rotate(-90)")
-  .text("Elderly Literacy Rate, Population 65+ years(%)");
+  .text("Elderly Literacy Rate, Population 65+ years (%)")
+  .attr("font-family", "Karla")
+  .style("fill", "#545454")
 
 const xAxis = d3
-    .axisBottom(xScale)
-    .ticks(10)
-    .tickFormat(function(d) {
+  .axisBottom(xScale)
+  .ticks(10)
+  .tickFormat(function(d) {
     return +d;
-    });
+  })
+  
 
 let yAxis = d3
     .axisLeft(yScale)
@@ -44,11 +49,15 @@ let yAxis = d3
     });
 
 g.append("g")
+  .attr("font-family", "Karla")
+  .style("stroke", "#545454")
   .attr("class", "x axis")
   .attr("transform", "translate(0," + height + ")")
   .call(xAxis);
 
 g.append("g")
+  .attr("font-family", "Karla")
+  .style("stroke", "#545454")
   .attr("class", "y axis")
   .call(yAxis);
 

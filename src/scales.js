@@ -2,7 +2,7 @@ import { height, width } from './chart_area.js'
 
 export const xScale = d3
   .scaleLinear()
-  .range([0, width - 40])
+  .range([0, width - 110])
   .domain([1, 100]);
 
 export const yScale = d3

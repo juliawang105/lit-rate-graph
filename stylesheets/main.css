@@ -4,12 +4,16 @@
     align-items: center;
 }
 
-.filter{
-    display: flex;
-}
 
 .app-name {
-    border: 1px solid black;
-    height: 50px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+    height: 50px; 
+    font-family: "Karla";
+    font-size: 20pt;
+    background-color:  #FDFDF0;
+    color: #545454
+
 }
