@@ -13,6 +13,6 @@ export const yScale = d3
 
 export const area = d3
     .scaleLinear()
-    .range([2 * Math.PI, 20 * Math.PI])
+    .range([3 * Math.PI, 30 * Math.PI])
     .domain([1, 1400000000]);
 

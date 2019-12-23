@@ -13,14 +13,14 @@
 
 #play-button:hover {
     background-color: #F6F9ED;
-    animation-name: shake;
-    animation-duration: 1s
+    /* animation-name: shake;
+    animation-duration: 1s */
 }
 
 #reset-button:hover {
     background-color: #F6F9ED;
-    animation-name: shake;
-    animation-duration: 1s
+    /* animation-name: shake;
+    animation-duration: 1s */
 }
 
 #reset-button {

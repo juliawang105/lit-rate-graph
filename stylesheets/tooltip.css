@@ -1,0 +1,13 @@
+.d3-tip{
+    border: 2px solid #F6F9ED;
+    border-radius: 2%;
+    padding: 10px;
+    font-family: "Karla";
+    font-size: 12pt;
+    background-color: #FDFDF0;
+    color: #545454;
+}
+
+.d3-tip > span {
+    padding: 5px;
+}
