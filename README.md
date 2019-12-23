@@ -45,6 +45,7 @@ let circles = g.selectAll("circle").data(arr, function(d) {
         return area(d.Pop);
       })
       .attr("opacity", "70%")
+      .style("cursor", "pointer")
       .on("mouseover", tip.show)
       .on("mouseout", tip.hide);
    ```
