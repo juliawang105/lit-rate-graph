@@ -3,7 +3,7 @@ import { line, xLabel, yLabel, xAxis, yAxis } from './graph.js';
 import { xScale, yScale, area } from './scales.js';
 import { regionLegend } from './legend.js';
 import { update } from './update';
-import { button, slider, selectRegion } from './button.js';
+import { button, slider, selectRegion, resetButton } from './button.js';
 
 export let finalData;
 
@@ -11,7 +11,9 @@ export const Literacy = () => {
     button();
     slider();
     selectRegion();
+    resetButton();
   
+  //Parsing Data 
    d3.csv("data/literacy.csv").then(data => {
      let sortedData = [
        { year: 2000, countries: [] },
@@ -55,6 +57,8 @@ export const Literacy = () => {
            return country;
          });
      });
+
+     //Updating data display 
      update(finalData[0], 0)
    });
 

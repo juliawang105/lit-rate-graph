@@ -4,9 +4,7 @@ import { xScale, yScale, area } from './scales.js';
 import { tip } from './tooltip.js';
 import { selectColor } from './button.js'
 
-export const update = (arr, time) => {
-    // console.log(arr); 
-        
+export const update = (arr, time) => {     
     let t = d3.transition().duration(100);
 
     arr = selectColor(arr);
