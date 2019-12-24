@@ -3,73 +3,73 @@
 
 <head>
 
-    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Poppins&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./stylesheets/reset.css" />
-    <link rel="stylesheet" type="text/css" href="./stylesheets/description.css" />
-    <link rel="stylesheet" type="text/css" href="./stylesheets/main.css" />
-    <link rel="stylesheet" type="text/css" href="./stylesheets/graph.css" />
-    <link rel="stylesheet" type="text/css" href="./stylesheets/buttons.css" />
-    <link rel="stylesheet" type="text/css" href="./stylesheets/animate.css" />
-    <link rel="stylesheet" type="text/css" href="./stylesheets/tooltip.css" />
-    <link rel="icon" type="image/x-icon" href="./stylesheets/reading.png">
+	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Poppins&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./stylesheets/reset.css" />
+	<link rel="stylesheet" type="text/css" href="./stylesheets/description.css" />
+	<link rel="stylesheet" type="text/css" href="./stylesheets/main.css" />
+	<link rel="stylesheet" type="text/css" href="./stylesheets/graph.css" />
+	<link rel="stylesheet" type="text/css" href="./stylesheets/buttons.css" />
+	<link rel="stylesheet" type="text/css" href="./stylesheets/animate.css" />
+	<link rel="stylesheet" type="text/css" href="./stylesheets/tooltip.css" />
+	<link rel="icon" type="image/x-icon" href="./stylesheets/reading.png">
 
-    <script src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
 
 </head>
 
 <body>
-    <div class="app-name">
-        <div class="title"> LitRate Graph</div>
-        <div class="links">
-            <a id="link" target="_blank" href="https://github.com/juliawang105/lit-rate-graph"><i
-                    class="fab fa-github fa-1x"></i></a>
-            <a id="link" target="_blank" href="https://www.linkedin.com/in/wang-julia/"><i
-                    class="fab fa-linkedin fa-1x"></i></a>
-        </div>
-        
-    </div>
-        
-    </div>
-    <div class="main">
-        <div class="filters">
-            <button id="play-button">Play</button>
-            <button id="reset-button">Reset Year</button>
-            
-            <select id="continent-select">
-                <option selected value="all">All</option>
-                <option value="Europe">Europe</option>
-                <option value="Asia">Asia</option>
-                <option value="Americas">Americas</option>
-                <option value="Africa">Africa</option>
-                <option value="Oceania">Oceania</option>
-            </select>
-            
-            <div class="rangeslider">
-                <input type="range" min="2000" max="2015" value="10" class="myslider" id="sliderRange">
-                <p>Year: <span id='demo'></span></p>
-            </div>
-        </div>
-       
-        <div class='graph'>
-            <div id='chart-area'></div>
-            <!-- Outside Libraries -->
-            <script src="src/d3-tip.js"></script>
-            <script src='dist/main.js'></script>
-        </div>
-        
-        <div class="description">
-            <p>The scatter plot displays the relationship between the youth literacy rates and the elderly literacy rates of specific nations from the years 2000-2015. 
-                Those that lay below the grey line indicate that the youth of that nation have higher literacy rates than those of the elderly. The circle size is based on the country's population.
-            </p>
-            <br>
-            <p>Hover over the circles to see the breakdown of literacy rates and population per country.</p>
-            <br>
-            <br>
-            <p>Data Source: World Bank</p>
-        </div>
-    </div>
+	<div class="app-name">
+			<div class="title"> LitRate Graph</div>
+			<div class="links">
+					<a id="link" target="_blank" href="https://github.com/juliawang105/lit-rate-graph"><i
+									class="fab fa-github fa-1x"></i></a>
+					<a id="link" target="_blank" href="https://www.linkedin.com/in/wang-julia/"><i
+									class="fab fa-linkedin fa-1x"></i></a>
+			</div>
+			
+	</div>
+			
+	</div>
+	<div class="main">
+			<div class="filters">
+					<button id="play-button">Play</button>
+					<button id="reset-button">Reset Year</button>
+					
+					<select id="continent-select">
+							<option selected value="all">All</option>
+							<option value="Europe">Europe</option>
+							<option value="Asia">Asia</option>
+							<option value="Americas">Americas</option>
+							<option value="Africa">Africa</option>
+							<option value="Oceania">Oceania</option>
+					</select>
+					
+					<div class="rangeslider">
+							<input type="range" min="2000" max="2015" value="10" class="myslider" id="sliderRange">
+							<p>Year: <span id='demo'></span></p>
+					</div>
+			</div>
+			
+			<div class='graph'>
+					<div id='chart-area'></div>
+					<!-- Outside Libraries -->
+					<script src="src/d3-tip.js"></script>
+					<script src='dist/main.js'></script>
+			</div>
+			
+			<div class="description">
+					<p>The scatter plot displays the relationship between the youth literacy rates and the elderly literacy rates of specific nations from the years 2000-2015. 
+							Those that lay below the grey line indicate that the youth of that nation have higher literacy rates than those of the elderly. The circle size is based on the country's population.
+					</p>
+					<br>
+					<p>Hover over the circles to see the breakdown of literacy rates and population per country.</p>
+					<br>
+					<br>
+					<p>Data Source: World Bank</p>
+			</div>
+	</div>
 </body>
 
 </html>

@@ -1,7 +1,7 @@
-import { g, margin, height, width } from './chart_area.js';
-import { xScale, yScale } from './scales';
+import { g, margin, height, width } from "./chart_area.js";
+import { xScale, yScale } from "./scales";
 
-//Diagonal Line 
+//Diagonal Line
 export const line = g
   .append("line")
   .attr("x1", 685)
@@ -41,7 +41,7 @@ const xAxis = d3
   .tickFormat(function(d) {
     return +d;
   });
-  
+
 g.append("g")
   .attr("font-family", "Karla")
   .style("stroke", "#545454")
@@ -49,18 +49,16 @@ g.append("g")
   .attr("transform", "translate(0," + height + ")")
   .call(xAxis);
 
-
 //Y Axis
 const yAxis = d3
-    .axisLeft(yScale)
-    .ticks(10)
-    .tickFormat(function(d) {
+  .axisLeft(yScale)
+  .ticks(10)
+  .tickFormat(function(d) {
     return +d;
-    });
+  });
 
 g.append("g")
   .attr("font-family", "Karla")
   .style("stroke", "#545454")
   .attr("class", "y axis")
   .call(yAxis);
-

@@ -1,57 +1,56 @@
 
 #play-button {
-    background-color: #FDFDF0;
-    color: #545454;
-    border-radius: 10%;
-    font-family: "Karla";
-    width: 100px;
-    height: 27px;
-    font-size: 14pt;
-    cursor: pointer;
-    
-
+	background-color: #FDFDF0;
+	color: #545454;
+	border-radius: 10%;
+	font-family: "Karla";
+	width: 100px;
+	height: 27px;
+	font-size: 14pt;
+	cursor: pointer;
+	
 }
 
 #play-button:hover {
-    background-color: #F6F9ED;
-    /* animation-name: shake;
-    animation-duration: 1s */
+	background-color: #F6F9ED;
+	/* animation-name: shake;
+	animation-duration: 1s */
 }
 
 #reset-button:hover {
-    background-color: #F6F9ED;
-    /* animation-name: shake;
-    animation-duration: 1s */
+	background-color: #F6F9ED;
+	/* animation-name: shake;
+	animation-duration: 1s */
 }
 
 #reset-button {
-    background-color: #FDFDF0;
-    color: #545454;
-    border-radius: 10%;
-    font-family: "Karla";
-    width: 100px;
-    height: 27px;
-    font-size: 12pt;
-    cursor: pointer;
+	background-color: #FDFDF0;
+	color: #545454;
+	border-radius: 10%;
+	font-family: "Karla";
+	width: 100px;
+	height: 27px;
+	font-size: 12pt;
+	cursor: pointer;
 }
 
 #continent-select {
-    width: 100px;
-    text-align: center;
-    font-family: "Karla";
-    cursor: pointer;
+	width: 100px;
+	text-align: center;
+	font-family: "Karla";
+	cursor: pointer;
 }
 
 .rangeslider {
-    font-family: "Karla";
-    font-size: 16pt;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #545454;
+	font-family: "Karla";
+	font-size: 16pt;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #545454;
 }
 
 #sliderRange{
-    cursor: grab;
+	cursor: grab;
 }

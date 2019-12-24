@@ -1,4 +1,4 @@
-import{ height, width, g } from './chart_area.js';
+import { height, width, g } from "./chart_area.js";
 
 export const regions = ["Europe", "Asia", "Americas", "Africa", "Oceania"];
 
@@ -6,10 +6,7 @@ export const regionColor = d3.scaleOrdinal(d3.schemeTableau10);
 
 let legend = g
   .append("g")
-  .attr(
-  "transform",
-  "translate(" + 810 + "," + (425) + ")"
-  );
+  .attr("transform", "translate(" + 810 + "," + 425 + ")");
 
 export const regionLegend = regions.forEach(function(region, i) {
   let legendRow = legend
@@ -21,7 +18,7 @@ export const regionLegend = regions.forEach(function(region, i) {
     .attr("width", 10)
     .attr("height", 10)
     .attr("fill", regionColor(region))
-    .attr("opacity", "70%")
+    .attr("opacity", "70%");
 
   legendRow
     .append("text")
@@ -33,7 +30,6 @@ export const regionLegend = regions.forEach(function(region, i) {
     .text(region)
     .style("fill", "#545454")
     .attr("opacity", "0.8");
-
 });
 
 export const timeLabel = g
