@@ -23,32 +23,41 @@ Inspired by [New York Times reporting of South Korean schools enrolling illitera
 * Each country's data is displayed according to year. 
 * D3's exit() , remove() , enter() , and merge() methods are called to allow for correct data to display. 
 ```javascript
-let circles = g.selectAll("circle").data(arr, function(d) {
+export const update = (arr, time) => {
+  let t = d3.transition().duration(100);
+
+  arr = selectColor(arr);
+
+  let circles = g.selectAll("circle").data(arr, function(d) {
     return d.name;
-    });
+  });
 
-    circles.exit().remove();
+  circles.exit().remove();
 
-    circles
-      .enter()
-      .append("circle")
-      .attr("fill", function(d) {
-        return regionColor(d.region);
-      })
-      .merge(circles)
-      .attr("cy", function(d) {
-        return yScale(d.Elderly);
-      })
-      .attr("cx", function(d) {
-        return xScale(d.Youth);
-      })
-      .attr("r", function(d) {
-        return area(d.Pop);
-      })
-      .attr("opacity", "70%")
-      .style("cursor", "pointer")
-      .on("mouseover", tip.show)
-      .on("mouseout", tip.hide);
+  circles
+    .enter()
+    .append("circle")
+    .attr("fill", function(d) {
+      return regionColor(d.region);
+    })
+    .merge(circles)
+    .attr("cy", function(d) {
+      return yScale(d.Elderly);
+    })
+    .attr("cx", function(d) {
+      return xScale(d.Youth);
+    })
+    .attr("r", function(d) {
+      return area(d.Pop);
+    })
+    .attr("opacity", "70%")
+    .style("cursor", "pointer")
+    .on("mouseover", tip.show)
+    .on("mouseout", tip.hide);
+
+  timeLabel.text(+(time + 2000));
+};
+
    ```
    #### Region: 
    * D3's ordinal scale is utilized to allow for correct regional color rendering. 
@@ -60,10 +69,7 @@ export const regionColor = d3.scaleOrdinal(d3.schemeTableau10);
 
 let legend = g
   .append("g")
-  .attr(
-    "transform",
-    "translate(" + 810 + "," + (425) + ")"
-  );
+  .attr("transform", "translate(" + 810 + "," + 425 + ")");
 
 export const regionLegend = regions.forEach(function(region, i) {
   let legendRow = legend
@@ -75,7 +81,7 @@ export const regionLegend = regions.forEach(function(region, i) {
     .attr("width", 10)
     .attr("height", 10)
     .attr("fill", regionColor(region))
-    .attr("opacity", "70%")
+    .attr("opacity", "70%");
 
   legendRow
     .append("text")
@@ -87,15 +93,16 @@ export const regionLegend = regions.forEach(function(region, i) {
     .text(region)
     .style("fill", "#545454")
     .attr("opacity", "0.8");
-
-    });
-};
+});
 
 let select = document.getElementById("continent-select");
+
+//Display by Regions
 export const selectRegion = () => {
-    select.addEventListener("change", function() {
+  select.addEventListener("change", function() {
     update(finalData[time], time);
-});
+  });
+};
 
    ```
 ### Button Controls
@@ -110,18 +117,18 @@ export const selectRegion = () => {
 
 * Users have the ability to choose specific years they want to view using the date slider. 
 * As users pause on a specific years, data rendered in update via event listeners. 
-```  javascript let rangeslider = document.getElementById("sliderRange");
+```  javascript 
 let year;
 let rangeslider = document.getElementById("sliderRange");
 let output = document.getElementById("demo");
 output.innerHTML = rangeslider.value;
 
 export const slider = arr => {
-    rangeslider.addEventListener('input', function(event){
-        year = event.target.value - 2000;
-        output.innerHTML = event.target.value;
-        update(finalData[year], year)
-    });
+  rangeslider.addEventListener("input", function(event) {
+    year = event.target.value - 2000;
+    output.innerHTML = event.target.value;
+    update(finalData[year], year);
+  });
 };
    ```
 #### D3 Tips 
