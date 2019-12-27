@@ -28,6 +28,8 @@
 	color: #545454;
 	margin: 5px; 
 	cursor: pointer;
+	text-decoration: none;
+	font-size: 14pt;
 }
 
 #link:hover {
